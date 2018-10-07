@@ -117,7 +117,7 @@ def ponder(expr):
     # Compile a list of all propositions in the expression
     props = []
     for char in expr:
-        if 'A' <= char <= 'Z' or 'a' <= char <= 'z':
+        if char not in props and ('A' <= char <= 'Z' or 'a' <= char <= 'z'):
             props.append(char)
 
     # Top row of the table
